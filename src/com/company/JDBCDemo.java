@@ -27,10 +27,9 @@ public class JDBCDemo {
         // 3. sql
         Date todayDate = new Date();
         Date beginDate = new SimpleDateFormat("yyyy-MM-dd").parse(begineDateStr);
-        long hourDiff = 0;
         long todayTimeSec = todayDate.getTime();
         long beginTimeSec = beginDate.getTime();
-        hourDiff = (todayTimeSec - beginTimeSec) / (1000 * 60 * 60);
+        long hourDiff = (todayTimeSec - beginTimeSec) / (1000 * 60 * 60);
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss") ;
 
         String sql = "INSERT INTO WEATHER VALUES(?, ?, 20.0, 25.0, 'cloudy', 10.4, 42.2, -122.5, 'Beijing', 'Beijing', 'China')";
